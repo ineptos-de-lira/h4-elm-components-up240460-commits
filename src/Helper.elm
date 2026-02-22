@@ -4,8 +4,8 @@ import Html
 import Html.Attributes
 
 
-joinWord : String -> String -> String
-joinWord str1 str2 =
+joinWords : String -> String -> String
+joinWords str1 str2 =
     str1 ++ str2
 
 
@@ -14,8 +14,8 @@ isUpperChars chars =
     List.map Char.isUpper chars
 
 
-evalChar : List Char -> (Char -> Bool) -> List Bool
-evalChar chars predicate =
+evalChars : List Char -> (Char -> Bool) -> List Bool
+evalChars chars predicate =
     List.map predicate chars
 
 
@@ -31,6 +31,6 @@ headers content =
         ]
 
 
-hyperlink : String -> String -> Html msg
+hyperlink : String -> String -> Html.Html msg
 hyperlink url label =
-    a [ href url ] [ text label ]
+    Html.a [ Html.Attributes.href url ] [ Html.text label ]
