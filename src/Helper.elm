@@ -3,6 +3,7 @@ module Helper exposing (..)
 import Html
 import Html.Attributes
 
+
 joinWord : String -> String -> String
 joinWord str1 str2 =
     str1 ++ str2
